@@ -16,9 +16,8 @@ describe "Spacecraft API" do
     get '/api/v1/spacecrafts/4/'
 
     expect(response).to be_successful
-    response = JSON.parse(response.body)
-    expect(ship_1).to eq(response)
-    expect(response.count).to eq(1)
+    ship_response = JSON.parse(response.body)
+    expect(ship_1).to eq(ship_response)
   end
 
 end

@@ -7,4 +7,10 @@ class StarwarsClient
     response = @connection.get('/api/vehicles/')
     response.body
   end
+
+  def get_vehicle(ship)
+    response = @connection.get("/api/vehicles/#{ship}/")
+    # binding.pry
+    response.body
+  end
 end
